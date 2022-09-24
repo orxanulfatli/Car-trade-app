@@ -1,0 +1,14 @@
+.car-details {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.car-details_galery {
+    width: 70%;
+    background-color: white;
+}
+
+.car-details_info{
+    flex-grow: 1;
+}

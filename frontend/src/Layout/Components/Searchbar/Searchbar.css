@@ -1,0 +1,52 @@
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+}
+
+.search-bar > div {
+  width: calc(20% - 10px);
+  margin: 5px;
+  background-color: var(--gray-light);
+}
+.loan {
+  display: flex;
+  gap: 10px;
+  background-color: #fff !important;
+}
+.label {
+  height: 34px;
+  border: 1px solid var(--gray-light);
+}
+.label input {
+  display: none;
+}
+.checkmark {
+  height: 100%;
+  padding: 5px 30px;
+}
+.checkmark:hover {
+  border: 1px solid black;
+}
+.label input:checked ~ .checkmark {
+  color: white;
+  background-color: var(--main-color);
+}
+.btn-search {
+  align-self: center;
+  flex-grow: 0;
+  margin-right: 5px;
+  color: #fff;
+  background-color: #1c9831;
+  padding: 9px 35px;
+}
+.btn-reset {
+  align-self: center;
+  flex-grow: 0;
+  color: #f81734;
+  background-color: transparent;
+  border: 1px solid #f81734;
+  padding: 8px 35px;
+}

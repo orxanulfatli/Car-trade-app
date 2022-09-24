@@ -1,0 +1,6 @@
+.input {
+  height: 32px;
+  background-color: var(--gray-light);
+  border-radius: 5px;
+  max-width: 150px;
+}

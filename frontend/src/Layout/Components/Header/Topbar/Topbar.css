@@ -1,0 +1,53 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #fff;
+  background-color: rgb(34, 49, 84);
+    font-size: 16px;
+
+}
+
+.logo {
+  height: 80px;
+}
+
+
+.topbar-nav__menu {
+  display:flex;
+  align-items: center;
+}
+.topbar-nav__menu li {
+  margin-left: 20px;
+}
+
+ .topbar-nav i {
+  font-size: 24px;
+ }
+
+
+ .dropdown-list{
+  display: none;
+ }
+
+ .dropdown-menu {
+  max-width:113px ;
+  background-color: rgb(255,70,5);
+  padding: 9px 13px;
+ }
+
+ .langs-menu{
+  padding: 5px 11px;
+   background-color: rgb(34, 49, 84);
+
+  color: #fff;
+  font-size: 24px;
+  border: 1px solid rgb(255,70,5);
+ }
+
+ 
+
+ .langs-menu option {
+     background-color: rgb(34, 49, 84);
+
+ }

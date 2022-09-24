@@ -1,0 +1,11 @@
+{
+  "name": "car-trader",
+  "version": "1.0.0",
+  "description": "mern stack car trader app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Orxan",
+  "license": "ISC"
+}

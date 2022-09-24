@@ -1,0 +1,11 @@
+.profile {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+}
+
+.profile >div {
+  width: calc(33.33% - 40px);
+  margin: 20px;
+}
+

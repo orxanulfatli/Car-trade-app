@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 50px;
+}
+
+.menu_list{
+display: flex;
+}
+
+.menu_list li {
+    margin-right: 50px;
+}
+
+.sell {
+        color: #29a53e;
+    background-color: #e0f8e4;
+    border: 1px solid #29a53e;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.sell:hover {
+    color: #fff;
+    background-color: #1c9831;
+    border-color: #1c9831;
+}
+
