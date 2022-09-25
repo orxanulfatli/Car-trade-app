@@ -1,11 +1,15 @@
 {
-  "name": "serverjs",
+  "name": "server",
   "version": "1.0.0",
   "description": "Auth API",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node -r esm",
-    "dev": "nodemon -r esm"
+    "dev": "nodemon -r esm",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Orxan Ulfatli",
   "license": "ISC",

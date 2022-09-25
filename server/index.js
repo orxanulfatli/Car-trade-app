@@ -12,12 +12,10 @@ import constants from "./constants";
 import userRoutes from "./Routes/user-route";
 //errorMidlleware import
 import {errorMiddleware} from "./middlewares/error-middleware"
-import { multerError } from "./middlewares/multer-error-middleware";
 // process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 //init express app
 const app = express();
-//  const mongoDBURl = 
 //Apply Aplication Midlewares
 app.use(cors({
   credentials: true,
@@ -47,7 +45,6 @@ if (process.env.NODE_ENV === 'production') {
 app.use("/api/v1", userRoutes)
 
 app.use(errorMiddleware);
-// app.use(multerError);
 
 
 

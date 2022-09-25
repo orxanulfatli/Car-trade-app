@@ -1,10 +1,10 @@
 import {config} from "dotenv";
-config()
+config();
 
 export default {
   PORT: process.env.PORT || 5000,
   //process.env.MONGO_URL I set this MONGO_URL var to herokus env
-  DB: process.env.MONGO_URL || "mongodb://localhost:27017/app-auth",
+  DB: process.env.MONGO_URL ||'mongodb://localhost:27017/app-auth',
   DOMAIN: process.env.APP_DOMAIN,
   SENDGRID_API: process.env.SENDGRID_API,
   JWT_ACCESS_SECRET: process.env.JWT_ACCESS_SECRET,
