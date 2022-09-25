@@ -4,8 +4,22 @@
   "description": "mern stack car trader app",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon -r esm server/index.js",
+    "client": "npm start --prefix frontend",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Orxan",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orxanulfatli/Car-trade-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orxanulfatli/Car-trade-app/issues"
+  },
+  "homepage": "https://github.com/orxanulfatli/Car-trade-app#readme",
+  "dependencies": {
+    "esm": "^3.2.25"
+  }
 }
