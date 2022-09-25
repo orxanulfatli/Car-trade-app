@@ -1,26 +1,32 @@
 {
-  "name": "car-trader",
+  "name": "serverjs",
   "version": "1.0.0",
-  "description": "mern stack car trader app",
+  "description": "Auth API",
   "main": "index.js",
-
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon -r esm server/index.js",
-    "client": "npm start --prefix frontend",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --force --prefix frontend && npm run build --prefix frontend"
+    "start": "node -r esm",
+    "dev": "nodemon -r esm"
   },
-  "author": "Orxan",
+  "author": "Orxan Ulfatli",
   "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/orxanulfatli/Car-trade-app.git"
-  },
-  "bugs": {
-    "url": "https://github.com/orxanulfatli/Car-trade-app/issues"
-  },
-  "homepage": "https://github.com/orxanulfatli/Car-trade-app#readme",
   "dependencies": {
-    "esm": "^3.2.25"
+    "aws-sdk": "^2.1137.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cookieparser": "^0.1.0",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^10.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "express-validator": "^6.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.14",
+    "multer": "^1.4.4",
+    "nodemailer": "^6.7.2",
+    "otp-generator": "^4.0.0",
+    "passport": "^0.5.0",
+    "passport-jwt": "^4.0.0",
+    "server": "^1.0.37"
   }
 }

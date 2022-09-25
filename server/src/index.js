@@ -5,7 +5,7 @@ import path from 'path'
 
 import mongoose from "mongoose";
 
-//import Apication constants
+//import Apication constantsnp
 import constants from "./constants";
 
 //Router imports
