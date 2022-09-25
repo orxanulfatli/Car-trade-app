@@ -1,1 +1,1 @@
-web:node server/index.js
+web:node -r esm server/index.js
