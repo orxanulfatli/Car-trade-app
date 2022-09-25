@@ -5,7 +5,6 @@ import { routes } from "./routes/routes.constants";
 import { loadState } from "./utils/localStorage";
 import { checkAuthAC } from "./Global/actions/authActions";
 import { useDispatch } from "react-redux";
-import NewCar from "./Pages/NewCar/NewCar";
 
 function App() {
   const dispatch = useDispatch()
