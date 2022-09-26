@@ -17,10 +17,12 @@ import {errorMiddleware} from "./middlewares/error-middleware"
 //init express app
 const app = express();
 //Apply Aplication Midlewares
-app.use(cors({
-  credentials: true,
-  origin:constants.CLIENT_URL
-}));
+app.use(
+  cors({
+    credentials: true,
+    origin: [constants.CLIENT_URL , "http://localhost:3000"],
+  })
+);
 
 app.use(express.json());
 app.use(cookieParser())

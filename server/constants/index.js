@@ -14,7 +14,7 @@ export default {
   SMTP_USER: process.env.SMTP_USER,
   SMTP_PASSWORD: process.env.SMTP_PASSWORD,
   //process.env.ClIENT_URL CLIENT_URL in herokus env 
-  CLIENT_URL: process.env.CLIENT_URL || "http://localhost:3000",
+  CLIENT_URL: process.env.CLIENT_URL ,
   //aws credentials
   AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
   AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
