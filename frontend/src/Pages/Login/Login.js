@@ -3,14 +3,12 @@ import "./Login.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import FormControl from "../../components/FormControl/FormControl";
-import { loginAC, useVerify } from "../../Global/actions/authActions";
+import { loginAC, verifyAC } from "../../Global/actions/authActions";
 import Input from "../../components/FormControl/Input/Input";
 
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location)
-  const verifyAC = useVerify();
   const from = location?.state?.from?.pathname || "/";
   const { error, isLoading, isOtp, email } = useSelector(
     (state) => state.auth
@@ -59,7 +57,7 @@ const Login = () => {
               <button
                 className="btn--gradient"
                 onClick={() => {
-                  dispatch(verifyAC(email, value, from));
+                  dispatch(verifyAC(email, value, from,navigate));
                   setCounter(0);
                 }}
               >
