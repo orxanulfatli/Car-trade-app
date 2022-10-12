@@ -29,6 +29,7 @@ export const carReducer = (state = initState, { type, payload }) => {
       return {
         ...state,
         error: null,
+        success:true
       };
     case CAR_ACTION_CONSTANTS.GET_CARS_SUCCESS:
       return {

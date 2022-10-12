@@ -35,6 +35,8 @@ const MultiplyImageUpload = withImagePreview({ control: false })(
 const NewCar = () => {
   const dispatch = useDispatch();
   const { marks, models } = useSelector(state => state.dropdown);
+    const { isLoading, success } = useSelector((state) => state.car);
+
 
 
   const [files, setFiles] = useState({ item: null, items: [] });
@@ -96,6 +98,7 @@ const NewCar = () => {
     }
     dispatch(addCarAC(newCarForm));
   };
+  if(success) return <div>car is successfully added </div>;
   return (
     <Formik
       initialValues={{ ...initialValues }}
@@ -356,7 +359,7 @@ const NewCar = () => {
                 </div>
               </div>
             </>
-            <button type="submit">submit</button>
+            {isLoading?<div>...isloading</div> :<button type="submit">Add</button>}
           </form>
         </div>
       )}
