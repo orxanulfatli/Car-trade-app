@@ -1,5 +1,5 @@
 import $api from "./config"
-import { ADD_CAR_URL, API_URL, GET_CARS_URL, GET_CAR_DETAIL } from "./service.constants"
+import { ADD_CAR_URL,  GET_CARS_URL, GET_CAR_DETAIL } from "./service.constants"
 import  axios  from 'axios';
 
 export const addCar = (data) => {
@@ -7,10 +7,10 @@ export const addCar = (data) => {
 }
 
 export const getCars = () => {
-  console.log(API_URL + GET_CARS_URL);
-  return axios.get(API_URL + GET_CARS_URL)
+  console.log( GET_CARS_URL);
+  return axios.get( GET_CARS_URL)
 }
 
 export const getCarDetails = (id) => {
-  return axios.get(`${API_URL +GET_CAR_DETAIL}/${id}`)
+  return axios.get(`${GET_CAR_DETAIL}/${id}`)
 };

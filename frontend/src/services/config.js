@@ -1,10 +1,8 @@
 import axios from "axios";
-import { API_URL } from "./service.constants";
 import { loadState, saveState } from "../utils/localStorage";
 import { checkAuth } from "./authService";
 const $api = axios.create({
   withCredentials: true,
-  baseURL: API_URL,
 });
 
 $api.interceptors.request.use(
