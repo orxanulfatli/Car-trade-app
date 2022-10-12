@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { REACT_APP_DEV_API, REACT_APP_PROD_API } = process.env;
-  console.log(REACT_APP_DEV_API,'s');
+ 
   const { cars } = useSelector((state) => state.car);
   useEffect(() => {
     dispatch(getCarsAC());

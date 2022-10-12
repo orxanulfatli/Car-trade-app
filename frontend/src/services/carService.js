@@ -7,8 +7,7 @@ export const addCar = (data) => {
 }
 
 export const getCars = () => {
-  console.log( GET_CARS_URL);
-  return axios.get( GET_CARS_URL)
+  return axios.get(GET_CARS_URL)
 }
 
 export const getCarDetails = (id) => {

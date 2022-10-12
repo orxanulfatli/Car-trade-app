@@ -29,6 +29,8 @@ app.use(cookieParser())
 app.use(express.urlencoded({
 extended:true
 }));
+
+app.use("/api/v1", userRoutes);
   const __dirname1 = path.resolve();
 
 if (process.env.NODE_ENV === 'production') {
@@ -43,7 +45,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 //Inject Routes
-app.use("/api/v1", userRoutes)
+
 
 app.use(errorMiddleware);
 
