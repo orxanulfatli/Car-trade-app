@@ -45,7 +45,7 @@ const CarCard = ({
         </h3>
         <h3 className="car-card__details--title">{mark}</h3>
         <div className="car-card__details--infos">
-          {`${release},${engineCapacity} L,${kmsDriven}`}
+          {`${release},${engineCapacity/1000} L,${kmsDriven}`}
         </div>
       </div>
     </div>
