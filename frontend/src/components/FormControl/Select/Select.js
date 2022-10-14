@@ -1,7 +1,7 @@
 import React from "react";
 import { useKey } from "../../../utils/useKey";
 
-const Select = ({ style,name, items, className, onChange, ...rest }) => {
+const Select = ({ style,name, items, className,text, onChange, ...rest }) => {
   const getKey = useKey();
   return (
     <select
@@ -12,7 +12,7 @@ const Select = ({ style,name, items, className, onChange, ...rest }) => {
       onChange={onChange}
       {...rest}
     >
-      <option>secin</option>;
+      <option>{ text}</option>;
       {items?.map((value, index) => {
         return value.subModels ? (
           <optgroup label={value.name} key={getKey(value.name, index)}>

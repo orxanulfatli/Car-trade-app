@@ -69,7 +69,7 @@ const Searchbar = () => {
       <div className="search-bar">
         <SearchableDropDown
           name="mark"
-          placeholder={"Marka"}
+          placeholder={"Mark"}
           options={marks}
           onChange={onChange}
           value={value}
@@ -86,7 +86,7 @@ const Searchbar = () => {
         />
         <SingleDropdown
           values={value.minRelease + "-" + value.maxRelease + ","}
-          promt={"buraxilish ili"}
+          promt={"Release year"}
         >
           <input
             placeholder="min"
@@ -103,7 +103,7 @@ const Searchbar = () => {
         </SingleDropdown>
         <SingleDropdown
           value={value.minCost + "-" + value.maxCost + " " + value.currency}
-          promt={"Qiymet"}
+          promt={"Price"}
         >
           <div>
             <input
@@ -137,9 +137,10 @@ const Searchbar = () => {
         />
         <div>
           <Select
-            style={{ width: "100%" }}
+            style={{ width: "100%",padding:"5px" }}
             name={"fuel"}
             items={fuel}
+            text={'Fuel'}
             onChange={onChange}
           />
         </div>
@@ -167,9 +168,10 @@ const Searchbar = () => {
 
         <div>
           <Select
-            style={{ width: "100%" }}
+            style={{ width: "100%",padding:'5px' }}
             name={"transmission"}
             items={transmission}
+            text={'Transmission'}
             onChange={onChange}
           />
         </div>

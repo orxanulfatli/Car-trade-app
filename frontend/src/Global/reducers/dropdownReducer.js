@@ -13,7 +13,7 @@ import {
 } from "../../data";
 const items = [
   {
-    name: "Marka",
+    name: "Mark",
   },
   { name: "Abarth", models: [{ name: "595" }] },
   {
