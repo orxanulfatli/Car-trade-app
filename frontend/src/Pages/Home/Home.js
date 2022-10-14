@@ -4,11 +4,9 @@ import { getCarsAC } from "../../Global/actions/carActions";
 import { useDispatch, useSelector } from "react-redux";
 import CarCard from "../../components/CarCard/CarCard";
 import List from "../../components/List/List";
-import { Link } from "react-router-dom";
 
 const Home = () => {
   const dispatch = useDispatch();
- 
   const { cars } = useSelector((state) => state.car);
   useEffect(() => {
     dispatch(getCarsAC());
@@ -16,7 +14,6 @@ const Home = () => {
   return (
     <>
       <Searchbar />
-
       <List
         items={cars}
         renderItems={(car) => (

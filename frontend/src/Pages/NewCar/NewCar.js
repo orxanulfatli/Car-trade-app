@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./NewCar.css";
 import { useState } from "react";
 import * as Yup from "yup";
@@ -24,6 +24,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import { useDispatch,useSelector } from "react-redux";
 import { addCarAC } from "../../Global/actions/carActions";
+import { CAR_ACTION_CONSTANTS } from "../../Global/actions/action.constants";
 const SingleImageUpload = withImagePreview({ control: true })(
   ImagePreview,
   ImageInput
@@ -35,9 +36,16 @@ const MultiplyImageUpload = withImagePreview({ control: false })(
 const NewCar = () => {
   const dispatch = useDispatch();
   const { marks, models } = useSelector(state => state.dropdown);
-    const { isLoading, success } = useSelector((state) => state.car);
+  const { isLoading, success,error } = useSelector((state) => state.car);
 
-
+  useEffect(() => {
+    if (success) {
+      dispatch({type:CAR_ACTION_CONSTANTS.NEW_CAR_RESET})
+    }
+    if (error) {
+      dispatch({type:CAR_ACTION_CONSTANTS.CLEAR_ERROR})
+    }
+  },[])
 
   const [files, setFiles] = useState({ item: null, items: [] });
   const initialValues = {
@@ -98,7 +106,9 @@ const NewCar = () => {
     }
     dispatch(addCarAC(newCarForm));
   };
-  if(success) return <div>car is successfully added </div>;
+  if (success) return <div>your offer is successfully added.Go to your cabinet to see your offer </div>;
+  if (error) return <div>something went wrong:{error} </div>;
+  
   return (
     <Formik
       initialValues={{ ...initialValues }}
