@@ -28,3 +28,27 @@
 .addInfo {
   margin: 20px 0;
 }
+
+.Toastify__toast--success {
+  padding: 20px !important;
+  color: #29a53e !important;
+  box-shadow: 10px 10px 5px 1px rgba(199, 219, 196, 0.75) !important;
+  -webkit-box-shadow: 10px 10px 5px 1px rgba(199, 219, 196, 0.75) !important;
+  -moz-box-shadow: 10px 10px 5px 1px rgba(199, 219, 196, 0.75) !important;
+  background-color: #e0f8e4 !important;
+  border: 1px solid #29a53e !important;
+}
+.Toastify__toast--success button {
+  color: #29a53e !important;
+}
+
+.submit {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-submit {
+  margin-top: 20px; 
+  padding: 10px;
+  background-color: rgb(255,70,5);
+  color: white;
+}

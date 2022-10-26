@@ -1,10 +1,9 @@
 import { AUTH_ACTION_CONSTANTS } from "../actions/action.constants";
 
 const initState = {
-  isLoading: false,
+  isLoading: true,
   error: null,
   isOtp: false,
-  isAuth: false,
   email: null,
 };
 

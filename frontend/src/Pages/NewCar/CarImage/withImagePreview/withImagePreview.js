@@ -4,17 +4,9 @@ const withImagePreview = (config) => {
   const { control } = config;
   return (ImagePreview, ImageInput) =>
     ({ backImage, onHandleChange,name, file, ...props }) => {
-      // const [image, setImage] = useState(null);
       const [fileDataURL, setFileDataURL] = useState(null);
       const [fileDataURLS, setFIleDataURLS] = useState([]);
-      // const onHandleChange = (e) => {
-      //   const file = e.target.files[0];
-      //   if (file.type.substr(0, 5) === "image") {
-      //     setImage(file);
-      //   } else {
-      //     setImage(null);
-      //   }
-      // };
+     
 
       const onHandleDelete = (e, ind) => {
         e.preventDefault();
@@ -54,8 +46,7 @@ const withImagePreview = (config) => {
         };
       }, [file]);
 
-      //   if (preview) { const mainImages = <></> }
-      //   else {const otherImages =<></>}
+   
 
       return (
         <>
